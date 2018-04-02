@@ -7,14 +7,14 @@ import java.util.UUID;
 public class Person {
 
     @Id
-    private UUID uuid;
+    private String uuid;
     private String name;
 
-    public UUID getUuid() {
+    public String getUuid() {
         return uuid;
     }
 
-    public void setUuid(UUID uuid) {
+    public void setUuid(String uuid) {
         this.uuid = uuid;
     }
 
@@ -28,7 +28,7 @@ public class Person {
 
 
     public static final class PersonBuilder {
-        private UUID uuid;
+        private String uuid;
         private String name;
 
         private PersonBuilder() {
@@ -38,7 +38,7 @@ public class Person {
             return new PersonBuilder();
         }
 
-        public PersonBuilder uuid(UUID uuid) {
+        public PersonBuilder uuid(String uuid) {
             this.uuid = uuid;
             return this;
         }
